@@ -182,8 +182,9 @@ public class Main {
             for (int row = 0; row < b.length; row++)
                 for (int col = 0; col < b[row].length; col++) {
                     if (f.equalsIgnoreCase(b[row][col])) {
-                        col++;
+                        col--;
                         led = b[row][col];
+                        col++;
                     }
                 }
 

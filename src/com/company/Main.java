@@ -142,7 +142,7 @@ public class Main {
     public static boolean decoder() throws IOException
     {
         try {
-            Scanner j = new Scanner(new File("StudentGrades"));
+            Scanner j = new Scanner(new File("names.txt"));
         }
         catch (java.io.FileNotFoundException e)
         {
@@ -155,7 +155,7 @@ public class Main {
     {
         String[][] enigma;
         int count = 0;
-        Scanner kb = new Scanner(new File("StudentGrades"));
+        Scanner kb = new Scanner(new File("names.txt"));
         while (kb.hasNextLine())
         {
             count++;
@@ -165,7 +165,7 @@ public class Main {
             enigma = new String[count][];
         else
             enigma=null;
-        kb = new Scanner(new File("StudentGrades"));
+        kb = new Scanner(new File("names.txt"));
         for (int t = 0; t < count; t++)
         {
             enigma[t] = kb.nextLine().split("\\s+");

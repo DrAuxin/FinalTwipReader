@@ -137,7 +137,7 @@ public class Main {
     }
     public static void printer(Student todo, String[][] forth)
     {
-        System.out.printf("%-15s %-15s %-15s %-15s %-15s\n",search(forth, todo.id), todo.id, Math.round((todo.score1+todo.score2)/2), Math.round(todo.score1),Math.round(todo.score2));
+        System.out.printf("%-15s %-15s %-15s %-15s %-15s\n",search(forth, todo.id), todo.id, todo.score1+todo.score2, Math.round(todo.score1),Math.round(todo.score2));
     }
     public static boolean decoder() throws IOException
     {

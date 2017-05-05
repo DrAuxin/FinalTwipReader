@@ -7,6 +7,8 @@ public class Student {
     public double score1;
     public int id;
     public double score2;
+    public double sum1;
+    public double sum2;
     public Student (int ID)
     {
         id = ID;

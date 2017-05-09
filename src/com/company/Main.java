@@ -50,10 +50,14 @@ public class Main {
                 if (inuse.next().equalsIgnoreCase("+"))
                 {
                     holder = inuse.next();
-                    if (holder.contains("."))
-                        sum = sum + Double.parseDouble(holder.substring(1))/10.0;
-                    else if (!holder.contains("w"))
+                    if (holder.contains(".")) {
+                        sum = sum + Double.parseDouble(holder.substring(1)) / 10.0;
+                        x.sum1 = x.sum1 + Double.parseDouble(holder.substring(1)) / 10.0;
+                    }
+                    else if (!holder.contains("w")) {
                         sum = sum + Double.parseDouble(holder);
+                        x.sum1 = x.sum1 + Double.parseDouble(holder);
+                    }
                 }
             }
             if (place + 1 >= gr1.length || !gr1[place+1].contains("+"))
@@ -67,6 +71,7 @@ public class Main {
             if (gr1[place].length()==1)
             {
                 sum = sum - Double.parseDouble(gr1[place])*0.25;
+                x.sum1 = x.sum1- Double.parseDouble(gr1[place])*0.25;
                 place ++;
                 break;
             }
@@ -85,10 +90,14 @@ public class Main {
                 if (inuse.next().equalsIgnoreCase("+"))
                 {
                     holder = inuse.next();
-                    if (holder.contains("."))
-                        sum = sum + Double.parseDouble(holder.substring(1))/10.0;
-                    else if (!holder.contains("w"))
+                    if (holder.contains(".")) {
+                        sum = sum + Double.parseDouble(holder.substring(1)) / 10.0;
+                        x.sum2 = x.sum2 + Double.parseDouble(holder.substring(1)) / 10.0;
+                    }
+                    else if (!holder.contains("w")) {
                         sum = sum + Double.parseDouble(holder);
+                        x.sum2 = x.sum2 + Double.parseDouble(holder);
+                    }
                 }
             }
             if (locale + 1 >= gr2.length || !gr2[locale+1].contains("+"))
@@ -102,6 +111,7 @@ public class Main {
             if (gr2[locale].length()==1)
             {
                 sum = sum - Double.parseDouble(gr2[locale])*0.25;
+                x.sum2 = x.sum2- Double.parseDouble(gr2[locale])*0.25;
                 locale ++;
                 break;
             }
@@ -137,7 +147,7 @@ public class Main {
     }
     public static void printer(Student todo, String[][] forth)
     {
-        System.out.printf("%-15s %-15s %-15s %-15s %-15s\n",search(forth, todo.id), todo.id, todo.score1+todo.score2, Math.round(todo.score1),Math.round(todo.score2));
+        System.out.printf("%-15s %-15s %-15s %-15s %-15s\n",search(forth, todo.id), todo.id, todo.score1+todo.score2, todo.sum1,todo.sum2);
     }
     public static boolean decoder() throws IOException
     {

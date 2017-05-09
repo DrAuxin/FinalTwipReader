@@ -14,5 +14,7 @@ public class Student {
         id = ID;
         score1 = 0;
         score2 = 0;
+        sum1 = 0;
+        sum2 =0;
     }
 }

@@ -11,7 +11,7 @@ public class Main {
         String[][] book = null;
         if (more)
             book = lexicon();
-        System.out.printf("%-15s %-15s %-15s %-15s %-15s\n","Name", "Secret Number", "Average", "Score 1", "Score 2");
+        System.out.printf("%-15s %-15s %-15s %-15s %-15s %-15s %-15s\n","Name", "Secret Number", "Average", "Score 1", "Score 2", "FRQ 1", "FRQ 2");
         int x = 28;
         Scanner reader = new Scanner(new File("rawDataU6.txt"));
         Student list[] = new Student[28];
@@ -147,7 +147,7 @@ public class Main {
     }
     public static void printer(Student todo, String[][] forth)
     {
-        System.out.printf("%-15s %-15s %-15s %-15s %-15s\n",search(forth, todo.id), todo.id, todo.score1+todo.score2, todo.sum1,todo.sum2);
+        System.out.printf("%-15s %-15s %-15s %-15s %-15s %-15s %-15s\n",search(forth, todo.id), todo.id, todo.score1+todo.score2, todo.sum1,todo.sum2, todo.score1, todo.score2);
     }
     public static boolean decoder() throws IOException
     {

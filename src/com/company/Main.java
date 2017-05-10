@@ -11,7 +11,7 @@ public class Main {
         String[][] book = null;
         if (more)
             book = lexicon();
-        System.out.printf("%-15s %-15s %-15s %-15s %-15s %-15s %-15s\n","Name", "Secret Number", "Average", "Score 1", "Score 2", "FRQ 1", "FRQ 2");
+        System.out.printf("%-15s %-15s %-15s %-15s %-15s %-15s %-15s\n","Name", "Secret Number", "Score Average", "Score 1", "Score 2", "FRQ 1 Average", "FRQ 2 Average");
         int x = 28;
         Scanner reader = new Scanner(new File("rawDataU6.txt"));
         Student list[] = new Student[28];
